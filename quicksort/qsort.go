@@ -13,12 +13,12 @@ func glue(a []int,b []int, c int) []int{
 }
 
 func qsort(a []int) []int{
-    less := []int{}
-    bigger := []int{}
     if len(a) < 2{
         return a
-    }else{
+    } else{
         pivot := int(a[0])
+        less := []int{}
+        bigger := []int{}
         for i:=1; i<len(a); i++{
             if a[i]<= pivot{
                 less = append(less, a[i]) 
